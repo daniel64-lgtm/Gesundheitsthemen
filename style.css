@@ -119,6 +119,13 @@ main { margin-left: 220px; }
   color: var(--text-dim);
   margin-top: 20px;
 }
+.hero-byline {
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.hero-byline strong { color: var(--text); font-weight: 600; }
+
 .hero-cta {
   display: inline-block;
   margin-top: 32px;
@@ -136,6 +143,39 @@ main { margin-left: 220px; }
   width: 200px;
   opacity: 0.5;
 }
+
+/* ---------- TOC / Overview ---------- */
+.toc-section {
+  padding: 0 8vw 8vw;
+  border-top: 1px solid var(--line);
+  padding-top: 5vw;
+}
+.toc-lead {
+  color: var(--gold);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.toc-card {
+  background: var(--bg);
+  padding: 26px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.2s;
+  display: block;
+}
+.toc-card:hover { background: var(--surface); }
+.toc-num { font-family: var(--mono); font-size: 12px; color: var(--gold); }
+.toc-card h3 { font-size: 17px; margin: 10px 0 8px; }
+.toc-card p { font-size: 13.5px; color: var(--text-dim); margin: 0; max-width: none; }
+.toc-card-calc { background: var(--surface); }
+.toc-card-calc .toc-num { color: var(--teal); }
 
 /* ---------- Chapters ---------- */
 .chapter {
@@ -378,12 +418,15 @@ h3 { font-size: 22px; margin-top: 0; }
   .grid-3.card-row, .grid-4.card-row { grid-template-columns: 1fr 1fr; }
   .hero-helix { opacity: 0.25; width: 120px; }
   .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+  .toc-grid { grid-template-columns: repeat(2, 1fr); }
+  .toc-section { padding: 0 6vw 10vw; }
 }
 @media (max-width: 560px) {
   .grid-3.card-row, .grid-4.card-row { grid-template-columns: 1fr; }
   .hero { padding: 24vw 6vw 10vw; }
   .chapter { padding: 16vw 6vw 12vw; }
   .pillar-bar-row { grid-template-columns: 110px 1fr 34px; }
+  .toc-grid { grid-template-columns: 1fr; }
 }
 
 /* focus visibility */

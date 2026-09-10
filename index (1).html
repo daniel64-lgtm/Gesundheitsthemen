@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zellwerk — Der Bauplan zellulärer Langlebigkeit</title>
+<meta name="description" content="Ein interaktiver Leitfaden durch die Biologie des Alterns: Telomere, Vagusnerv, Immunsystem, Ernährung, Supplementation, Epigenetik und den zirkadianen Rhythmus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="chapternav" aria-label="Kapitelnavigation">
+  <div class="nav-mark">Z</div>
+  <ol id="navlist">
+    <li data-target="ch6"><span class="navnum">01</span><span class="navlabel">Epigenetik</span></li>
+    <li data-target="ch1"><span class="navnum">02</span><span class="navlabel">Telomere</span></li>
+    <li data-target="ch2"><span class="navnum">03</span><span class="navlabel">Vagusnerv</span></li>
+    <li data-target="ch3"><span class="navnum">04</span><span class="navlabel">Immunnetz</span></li>
+    <li data-target="ch7"><span class="navnum">05</span><span class="navlabel">Zirbeldrüse</span></li>
+    <li data-target="ch8"><span class="navnum">06</span><span class="navlabel">Oxidativer Stress</span></li>
+    <li data-target="ch9"><span class="navnum">07</span><span class="navlabel">Viszerales Fett</span></li>
+    <li data-target="ch4"><span class="navnum">08</span><span class="navlabel">Ernährung</span></li>
+    <li data-target="ch5"><span class="navnum">09</span><span class="navlabel">Supplemente</span></li>
+    <li data-target="ch10"><span class="navnum">10</span><span class="navlabel">Waldbaden</span></li>
+    <li data-target="calc" class="navcalc"><span class="navnum">＋</span><span class="navlabel">Dein Score</span></li>
+  </ol>
+</nav>
+
+<button id="navtoggle" aria-label="Navigation öffnen">☰</button>
+
+<main>
+
+  <!-- HERO / MAINPAGE -->
+  <header class="hero">
+    <p class="hero-eyebrow">Gesund Altern — ein wissenschaftlicher Überblick</p>
+    <h1>Das Zellwerk.<br>Wie dein Körper<br>die Zeit misst.</h1>
+    <p class="hero-sub">Gesundes Altern ist kein Zufall und kein einzelner Trick, sondern das Zusammenspiel mehrerer biologischer Systeme, die sich gegenseitig steuern. An den Enden unserer Chromosomen entscheiden Telomere über die Teilungsfähigkeit jeder Zelle. Der Vagusnerv verbindet Darm, Herz und Gehirn und bestimmt, wie gut sich der Körper erholt. Das Immunsystem lernt vom Mikrobiom im Darm, Mitochondrien liefern die Energie dafür — und alles zusammen wird durch das gelesen, was wir essen, wie wir schlafen und wie unsere Gene durch Epigenetik "programmiert" werden. Ein Faktor zieht sich dabei durch fast jedes dieser Systeme: oxidativer Stress, das Ungleichgewicht zwischen freien Radikalen und den körpereigenen Schutzmechanismen. Dieser Leitfaden führt durch zehn dieser Systeme, zeigt ihre Wechselwirkungen und macht sie am Ende mit einem interaktiven Score greifbar.</p>
+    <p class="hero-byline">Von <strong>Daniel Hirsch</strong></p>
+    <a href="#ch1" class="hero-cta">Los geht's, Kapitel 1 ↓</a>
+    <svg class="hero-helix" viewBox="0 0 200 600" aria-hidden="true">
+      <path id="helixA" d="M20,0 C80,50 -40,100 20,150 C80,200 -40,250 20,300 C80,350 -40,400 20,450 C80,500 -40,550 20,600" fill="none" stroke="var(--teal)" stroke-width="1.5" opacity="0.5"/>
+      <path id="helixB" d="M60,0 C0,50 120,100 60,150 C0,200 120,250 60,300 C0,350 120,400 60,450 C0,500 120,550 60,600" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.4"/>
+    </svg>
+  </header>
+
+  <!-- TOC / OVERVIEW -->
+  <section class="toc-section" aria-label="Themenübersicht">
+    <p class="toc-lead">Zehn Systeme, ein Zusammenhang</p>
+    <div class="toc-grid">
+      <a class="toc-card" href="#ch6"><span class="toc-num">01</span><h3>Epigenetik</h3><p>Warum die DNA ein Manuskript ist, das der Lebensstil jeden Tag neu interpretiert.</p></a>
+      <a class="toc-card" href="#ch1"><span class="toc-num">02</span><h3>Telomere</h3><p>Die molekulare Uhr an den Enden der Chromosomen — und was sie schneller oder langsamer laufen lässt.</p></a>
+      <a class="toc-card" href="#ch2"><span class="toc-num">03</span><h3>Vagusnerv</h3><p>Die Datenautobahn zwischen Darm, Herz und Gehirn — Grundlage jeder tiefen Erholung.</p></a>
+      <a class="toc-card" href="#ch3"><span class="toc-num">04</span><h3>Immunnetzwerk</h3><p>Wie Darm, Mikrobiom und Mitochondrien gemeinsam über Entzündung und Abwehr entscheiden.</p></a>
+      <a class="toc-card" href="#ch7"><span class="toc-num">05</span><h3>Zirbeldrüse</h3><p>Der Taktgeber der inneren Uhr — und wie Licht deinen Schlaf im Guten wie im Schlechten steuert.</p></a>
+      <a class="toc-card" href="#ch8"><span class="toc-num">06</span><h3>Oxidativer Stress</h3><p>Das Ungleichgewicht zwischen freien Radikalen und Schutzsystemen — die gemeinsame Wurzel vieler Alterungsprozesse.</p></a>
+      <a class="toc-card" href="#ch9"><span class="toc-num">07</span><h3>Viszerales Fett</h3><p>Warum das Fett um die inneren Organe stoffwechselaktiver und riskanter ist als sichtbares Unterhautfett.</p></a>
+      <a class="toc-card" href="#ch4"><span class="toc-num">08</span><h3>Ernährung</h3><p>Baumaterial für die Zelle: Aminosäuren, Entzündungshemmer und die Planetary Health Diet.</p></a>
+      <a class="toc-card" href="#ch5"><span class="toc-num">09</span><h3>Supplemente</h3><p>Stacking, Timing und Qualität — ein präziser Leitfaden statt wahllosem Pillen-Arsenal.</p></a>
+      <a class="toc-card" href="#ch10"><span class="toc-num">10</span><h3>Waldbaden</h3><p>Shinrin-Yoku: wie bewusstes Naturerleben Stresssystem, Herz und Nervensystem messbar beruhigt.</p></a>
+      <a class="toc-card toc-card-calc" href="#calc"><span class="toc-num">＋</span><h3>Dein Score</h3><p>Ein interaktiver Rechner, der alle zehn Bereiche zu deinem persönlichen Exposom-Score zusammenführt.</p></a>
+    </div>
+  </section>
+
+  <!-- LEBENSBAUM -->
+  <section class="tree-section" aria-label="Der Lebensbaum als Sinnbild">
+    <svg class="tree-svg" viewBox="0 0 600 460" role="img" aria-label="Stilisierter Lebensbaum: Wurzeln als biologisches Fundament, Krone als tägliche Lebensgewohnheiten">
+      <line x1="40" y1="300" x2="560" y2="300" stroke="var(--line)" stroke-width="1"/>
+      <!-- roots -->
+      <g fill="none" stroke="var(--teal)" stroke-width="1.4" opacity="0.55">
+        <path d="M300,300 C270,330 230,335 190,370"/>
+        <path d="M300,300 C280,340 260,360 250,410"/>
+        <path d="M300,300 C300,345 300,375 300,420"/>
+        <path d="M300,300 C320,340 340,360 350,410"/>
+        <path d="M300,300 C330,330 370,335 410,370"/>
+      </g>
+      <!-- trunk -->
+      <path d="M300,300 C295,260 305,220 300,150" fill="none" stroke="var(--gold)" stroke-width="3"/>
+      <!-- branches -->
+      <g fill="none" stroke="var(--teal)" stroke-width="1.6" opacity="0.85">
+        <path d="M300,190 C260,170 220,150 160,120"/>
+        <path d="M300,170 C270,130 250,100 210,60"/>
+        <path d="M300,150 C300,110 300,80 300,40"/>
+        <path d="M300,170 C330,130 350,100 390,60"/>
+        <path d="M300,190 C340,170 380,150 440,120"/>
+      </g>
+      <!-- leaf / telomere caps -->
+      <g fill="var(--gold)">
+        <circle cx="160" cy="120" r="5"/>
+        <circle cx="210" cy="60" r="5"/>
+        <circle cx="300" cy="40" r="5"/>
+        <circle cx="390" cy="60" r="5"/>
+        <circle cx="440" cy="120" r="5"/>
+      </g>
+    </svg>
+    <p class="tree-caption">Ein Bild für den Zusammenhang: Die Wurzeln — DNA, Telomere, Mitochondrien — bilden das biologische Fundament, das wir nicht wählen. Die Krone dagegen wächst aus dem, was wir täglich tun: Ernährung, Bewegung, Schlaf, Stressregulation. Beides zusammen entscheidet, wie kräftig der Baum über die Jahre bleibt.</p>
+  </section>
+
+  <!-- CHAPTER 1: TELOMERE -->
+  <section class="chapter" id="ch6">
+    <div class="chapter-head">
+      <span class="chapter-num">01</span>
+      <h2>Der Bauplan des Lebens: DNA zur Epigenetik</h2>
+      <p class="chapter-intro">Deine DNA ist kein starres Schicksal, sondern ein Manuskript — und dein Lebensstil bestimmt, wie es gelesen wird.</p>
+    </div>
+
+    <div class="grid-3 card-row">
+      <div class="mini-card"><h4>Die Hardware (DNA)</h4><p>Der unveränderliche Bauplan — statischer Code der Erbinformation.</p></div>
+      <div class="mini-card"><h4>Die Fabrik (Proteinbiosynthese)</h4><p>Molekulare Maschinen lesen den Code und produzieren Bausteine.</p></div>
+      <div class="mini-card accent-teal"><h4>Die Software (Epigenetik)</h4><p>Steuert, welche Baupläne überhaupt gelesen werden.</p></div>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Der universelle Code</h3>
+        <p>Der gesamte Code des Lebens wird mit nur vier Basen geschrieben: Adenin, Thymin, Guanin, Cytosin. A bindet immer an T, G immer an C — diese strikte Komplementarität sichert fehlerfreies Kopieren. In jeder menschlichen Zelle stecken rund 2 Meter DNA, extrem dicht verpackt zu Chromosomen.</p>
+      </div>
+      <div class="diagram-box">
+        <svg viewBox="0 0 200 140" aria-label="DNA Basenpaarung">
+          <line x1="40" y1="20" x2="40" y2="120" stroke="var(--teal)" stroke-width="3"/>
+          <line x1="160" y1="20" x2="160" y2="120" stroke="var(--gold)" stroke-width="3"/>
+          <line x1="40" y1="40" x2="160" y2="40" stroke="var(--line)" stroke-width="2"/>
+          <line x1="40" y1="70" x2="160" y2="70" stroke="var(--line)" stroke-width="2"/>
+          <line x1="40" y1="100" x2="160" y2="100" stroke="var(--line)" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <p class="wide-p">Die DNA verlässt den Zellkern nie. Um ein Protein herzustellen, erstellt die Zelle eine mobile Arbeitskopie (mRNA) durch <strong>Transkription</strong>, exportiert sie ins Cytoplasma und übersetzt sie dort am Ribosom in eine Aminosäurekette — die <strong>Translation</strong>. Unnötige Abschnitte (Introns) werden vorher herausgeschnitten (Spleißen), die reife mRNA erhält Schutzkappe und Poly-A-Schwanz.</p>
+
+    <table class="data-table">
+      <thead><tr><th></th><th>Transkription</th><th>Translation</th></tr></thead>
+      <tbody>
+        <tr><td>Ort</td><td>Zellkern</td><td>Cytoplasma (Ribosomen)</td></tr>
+        <tr><td>Akteure</td><td>RNA-Polymerase, DNA</td><td>Ribosomen, tRNA, Aminosäuren</td></tr>
+        <tr><td>Output</td><td>mRNA</td><td>Fertiges Protein</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-box">
+      <h3>Das Zwillings-Paradoxon</h3>
+      <p>Warum entwickeln eineiige Zwillinge mit identischem genetischem Code im Alter völlig unterschiedliche Krankheiten? Die Antwort ist die Epigenetik — sie steuert, welche Gene überhaupt abgelesen werden, wie ein Dimmer statt eines simplen Schalters. Chemische Markierungen (etwa DNA-Methylierung) verändern die Lesbarkeit von Genen, ohne den Code selbst zu ändern.</p>
+    </div>
+
+    <blockquote class="pull-quote">Wir können mit unserem Lebensstil bis zu einem gewissen Teil steuern, wie unsere Gene aktiviert oder deaktiviert werden.<cite>— Prof. Isabelle Mansuy</cite></blockquote>
+
+    <div class="grid-4 card-row">
+      <div class="mini-card small"><h4>Ernährung</h4><p>Vitamine B2, B6, B12 und Zink liefern Bausteine zum Dimmen von Genen.</p></div>
+      <div class="mini-card small"><h4>Bewegung</h4><p>Aktiviert Dopamin, reguliert Stoffwechsel, schützt Telomere.</p></div>
+      <div class="mini-card small"><h4>Psyche & Erholung</h4><p>Meditation und Schlaf wirken als epigenetischer Schutzschild.</p></div>
+      <div class="mini-card small"><h4>Umfeld</h4><p>Reduktion von Umwelttoxinen verhindert negative Blockaden.</p></div>
+    </div>
+    <p class="wide-p callout">Ihre Gene sind nur das Manuskript. Wie die Geschichte gelesen wird, bestimmen Sie jeden Tag neu.</p>
+  </section>
+  <section class="chapter alt" id="ch1">
+    <div class="chapter-head">
+      <span class="chapter-num">02</span>
+      <h2>Die zwei Uhren des Lebens</h2>
+      <p class="chapter-intro">Dein chronologisches Alter steht fest. Dein biologisches Alter nicht. Der Unterschied entscheidet sich an den Enden deiner Chromosomen.</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Telomere: die Schutzkappen der DNA</h3>
+        <p>Telomere sind nicht-kodierende DNA-Sequenzen an den Enden jedes Chromosoms — vergleichbar mit den Plastikkappen an Schnürsenkeln. Bei jeder Zellteilung geht ein winziger Teil davon verloren, etwa 100 Nukleotide. Unterschreitet die Telomerlänge eine kritische Schwelle, verliert die Zelle ihre Teilungsfähigkeit: Sie altert (Seneszenz) oder stirbt.</p>
+      </div>
+      <div class="diagram-box">
+        <svg viewBox="0 0 320 180" class="telomere-diagram" aria-label="Telomerverkürzung über drei Zellteilungen">
+          <g class="telo-gen" transform="translate(20,20)">
+            <rect x="0" y="0" width="10" height="60" rx="5" fill="var(--gold)"/>
+            <rect x="0" y="60" width="10" height="30" fill="var(--line)"/>
+            <rect x="0" y="90" width="10" height="60" rx="5" fill="var(--gold)"/>
+          </g>
+          <text x="14" y="170" class="diagram-label">Jung</text>
+          <g class="telo-gen" transform="translate(150,35)">
+            <rect x="0" y="0" width="10" height="40" rx="5" fill="var(--gold)" opacity="0.7"/>
+            <rect x="0" y="40" width="10" height="50" fill="var(--line)"/>
+            <rect x="0" y="90" width="10" height="40" rx="5" fill="var(--gold)" opacity="0.7"/>
+          </g>
+          <text x="144" y="170" class="diagram-label">Mittelalt</text>
+          <g class="telo-gen" transform="translate(280,50)">
+            <rect x="0" y="0" width="10" height="16" rx="5" fill="var(--coral)"/>
+            <rect x="0" y="16" width="10" height="68" fill="var(--line)"/>
+            <rect x="0" y="84" width="10" height="16" rx="5" fill="var(--coral)"/>
+          </g>
+          <text x="264" y="170" class="diagram-label">Seneszent</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="grid-3 card-row">
+      <div class="mini-card">
+        <h4>Somatische Zellen</h4>
+        <p>Telomerase inaktiv. Begrenzte Teilung → gesundes Altern.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Keimbahnzellen</h4>
+        <p>Telomerase kontinuierlich hoch. Praktisch unsterblich — Erhalt der Art.</p>
+      </div>
+      <div class="mini-card accent-coral">
+        <h4>Tumorzellen</h4>
+        <p>Telomerase tödlich reaktiviert. Unkontrollierte Wucherung.</p>
+      </div>
+    </div>
+    <p class="callout">Das Enzym Telomerase kann verlorene DNA-Enden nachbauen — wie ein molekularer 3D-Drucker. Fehlt es komplett, altert die Zelle rasant. Ist es unkontrolliert aktiv, entsteht Krebs. Der Körper balanciert ständig zwischen beidem.</p>
+
+    <div class="grid-2 reverse">
+      <div class="diagram-box small-diagram">
+        <svg viewBox="0 0 300 140" aria-label="Telomerlänge und Gehirnstruktur">
+          <line x1="20" y1="70" x2="280" y2="70" stroke="var(--line)" stroke-width="2"/>
+          <circle cx="60" cy="70" r="26" fill="none" stroke="var(--teal)" stroke-width="2"/>
+          <circle cx="240" cy="70" r="42" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <text x="40" y="120" class="diagram-label">Kurze Telomere</text>
+          <text x="196" y="120" class="diagram-label">Lange Telomere</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Der Geist spiegelt die Zelle</h3>
+        <p>Laut Daten des Max-Planck-Instituts für Kognitions- und Neurowissenschaften ist die Telomerlänge direkt mit der physischen Struktur des Gehirns verknüpft. Verkürzen sich die Telomere, schrumpft die Großhirnrinde messbar — besonders im Präcuneus, einer Region für Selbstreflexion und Gedächtnis.</p>
+        <p>Die gute Nachricht: Diese biologische Uhr ist keine Einbahnstraße. Max-Planck-Forscher zeigen, dass sich Anzeichen von Zellalterung bereits innerhalb von <strong>1 bis 6 Monaten</strong> verändern können — die Telomerlänge reagiert messbar auf unser tägliches Verhalten, das sogenannte "Exposom".</p>
+      </div>
+    </div>
+
+    <h3>Was die Telomerase antreibt — und was sie zerstört</h3>
+    <div class="grid-3 card-row">
+      <div class="mini-card accent-teal">
+        <h4>Training</h4>
+        <p>Ausdauer- und Intervalltraining (26-Wochen-Studie) verlängern Telomere und steigern Telomerase-Aktivität messbar. Krafttraining stärkt zusätzlich Schutzproteine.</p>
+      </div>
+      <div class="mini-card accent-coral">
+        <h4>Der Zucker-Teufelskreis</h4>
+        <p>Einfachzucker löst Insulinfluten und Blutzucker-Crashs aus. Der ständige Wechsel erzeugt oxidativen Stress — reines Gift für Telomere.</p>
+      </div>
+      <div class="mini-card accent-gold">
+        <h4>Nahrung & Fasten</h4>
+        <p>Antioxidantien aus Pflanzenkost binden freie Radikale. Fastenperioden geben der Zelle die Ruhepause, um fehlerhafte Bestandteile abzubauen.</p>
+      </div>
+    </div>
+
+    <blockquote class="pull-quote">Extremer, langanhaltender emotionaler Stress führt zu signifikant kürzeren Telomeren. Psychischer Druck wirkt wie eine molekulare Schere an unserem Erbgut.<cite>— Elizabeth Blackburn, Nobelpreisträgerin</cite></blockquote>
+
+    <div class="exposom-teaser">
+      <h3>Das Exposom des Alterns</h3>
+      <p>Sechs Bereiche deines Alltags entscheiden gemeinsam über das Tempo deiner Zellalterung. Jeder von ihnen schont die kritische Telomer-Reserve.</p>
+      <div class="hexlist">
+        <span>Pflanzenbasierte Ernährung</span>
+        <span>Ausdauer- & Intervalltraining</span>
+        <span>Ausreichender Schlaf</span>
+        <span>Verzicht auf Zellgifte</span>
+        <span>Stressmanagement & Meditation</span>
+        <span>Soziale Bindungen</span>
+      </div>
+      <p class="jumplink">Diese sechs Faktoren bilden später deinen persönlichen <a href="#calc">Zell-Score</a>.</p>
+    </div>
+  </section>
+  <section class="chapter" id="ch2">
+    <div class="chapter-head">
+      <span class="chapter-num">03</span>
+      <h2>Der Nervus vagus — die Datenautobahn des Körpers</h2>
+      <p class="chapter-intro">Ein einziger Nerv verbindet Darm, Herz und Gehirn — und ist der wichtigste Gegenspieler des Stresssystems.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="diagram-box">
+        <svg viewBox="0 0 300 160" aria-label="Sympathikus versus Parasympathikus">
+          <line x1="30" y1="80" x2="270" y2="80" stroke="var(--line)" stroke-width="3"/>
+          <circle cx="60" cy="80" r="10" fill="none" stroke="var(--coral)" stroke-width="8" transform="translate(0,-30)"/>
+          <circle cx="240" cy="80" r="10" fill="none" stroke="var(--teal)" stroke-width="8" transform="translate(0,10)"/>
+          <text x="20" y="30" class="diagram-label">Sympathikus</text>
+          <text x="180" y="130" class="diagram-label">Parasympathikus (Vagus)</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Die vegetative Waage</h3>
+        <p>Der Sympathikus steuert die ergotrope Phase: Kampf, Flucht, Leistungssteigerung. Der Parasympathikus — dominiert vom Vagusnerv, dem X. Hirnnerv — steuert die trophotrope Phase: Regeneration und Aufbau. Ohne den Vagusnerv ist keine tiefgreifende physische Erholung möglich.</p>
+      </div>
+    </div>
+
+    <h3>Ein "umherschweifender" Nerv</h3>
+    <p class="wide-p">Der Vagusnerv entspringt im Hirnstamm, verlässt den Schädel, zieht durch den Hals gemeinsam mit den großen Halsgefäßen, spaltet sich im Brustraum auf, passiert Aortenbogen und Speiseröhre und innerviert schließlich fast den gesamten Verdauungstrakt bis zur linken Kolonflexur.</p>
+
+    <table class="data-table">
+      <thead><tr><th></th><th>Sensibel (Afferent)</th><th>Motorisch (Efferent)</th></tr></thead>
+      <tbody>
+        <tr><td>Kopf & Hals</td><td>Ohrmuschel, Hustenreflex</td><td>Schluckakt, Würgreflex</td></tr>
+        <tr><td>Thorax</td><td>Kehlkopf, Atmungsregulation</td><td>Herzfrequenz senken, Bronchialverengung</td></tr>
+        <tr><td>Abdomen</td><td>Viszerosensible Signale aus Magen, Leber, Darm</td><td>Parasympathische Steuerung der Verdauung</td></tr>
+      </tbody>
+    </table>
+    <p class="footnote">Klinisch relevant: Der rückläufige Nervus laryngeus recurrens versorgt die Stimmlippen. Bei Schilddrüsen-OPs besteht hohes Verletzungsrisiko — eine beidseitige Schädigung kann gefährliche Atemnot verursachen.</p>
+
+    <div class="grid-2 reverse">
+      <div>
+        <h3>Messbar über den Herzschlag</h3>
+        <p>Die Herzfrequenzvariabilität (HRV) macht Vagus-Aktivität sichtbar. Im Ruhezustand zeigt sich die parasympathische Dominanz exakt im Frequenzband von 0,15 bis 0,4 Hz — ein direkter Indikator für die Erholungsfähigkeit des gesamten Systems.</p>
+      </div>
+      <div class="diagram-box small-diagram">
+        <svg viewBox="0 0 300 120" aria-label="HRV Frequenzspektrum">
+          <path d="M20,100 Q60,20 90,100 T160,100" fill="none" stroke="var(--teal)" stroke-width="2"/>
+          <path d="M170,100 Q200,50 220,100 T280,100" fill="none" stroke="var(--coral)" stroke-width="2"/>
+          <text x="30" y="115" class="diagram-label">Ruhe</text>
+          <text x="200" y="115" class="diagram-label">Belastung</text>
+        </svg>
+      </div>
+    </div>
+
+    <blockquote class="pull-quote">80–90 % der Vagusfasern sind afferent — permanente Berichterstatter aus dem Darmraum an das Gehirn.</blockquote>
+
+    <div class="grid-3 card-row">
+      <div class="mini-card">
+        <h4>1. Produktion</h4>
+        <p>Darmbakterien zersetzen Nahrung zu Metaboliten wie kurzkettigen Fettsäuren.</p>
+      </div>
+      <div class="mini-card">
+        <h4>2. Rezeptor-Aktivierung</h4>
+        <p>Metaboliten binden an afferente Vagus-Endungen in der Darmschleimhaut.</p>
+      </div>
+      <div class="mini-card">
+        <h4>3. Signal-Transmission</h4>
+        <p>Der Vagus leitet das Signal elektrisch an den Hirnstamm weiter.</p>
+      </div>
+    </div>
+    <p class="footnote">UCLA-Forschungsdaten (2024): Bei keimfreien Mäusen ohne Mikrobiom sinkt die Vagusaktivität dramatisch. Erst spezifische Metaboliten stellen die neuronale Kommunikation wieder her.</p>
+
+    <p class="wide-p">Ist die Darmwand geschädigt ("Leaky Gut"), können Bakterien direkt über den Vagusnerv ins Gehirn wandern — nicht primär über die Blutbahn. Im Tierversuch sank nach Durchtrennung des Nervs (Vagotomie) die bakterielle Last im Gehirn drastisch. Man findet entsprechende Korrelationen in Tiermodellen mit Alzheimer, Parkinson und Autismus-Spektrum-Störungen.</p>
+
+    <h3>Neuromodulation: das Netzwerk programmieren</h3>
+    <table class="data-table">
+      <thead><tr><th></th><th>iVNS (Invasiv)</th><th>taVNS (Transkutan)</th><th>pVNS (Perkutan)</th></tr></thead>
+      <tbody>
+        <tr><td>Methode</td><td>Implantierter Schrittmacher</td><td>Externe Elektroden am Ohr/Hals</td><td>Minimalinvasive Nadelelektroden</td></tr>
+        <tr><td>Indikationen</td><td>Therapierefraktäre Epilepsie, schwere Depression</td><td>Epilepsie, Depression, Migräne, Clusterkopfschmerz</td><td>Postoperative & chronische Schmerzen</td></tr>
+        <tr><td>Nebenwirkungen</td><td>OP-Risiken, Heiserkeit, Husten</td><td>Nackenschmerzen, Hautirritation</td><td>Parästhesien, leichte Blutungen</td></tr>
+      </tbody>
+    </table>
+    <p class="wide-p">Elektrische Stimulation verschiebt Neurotransmitter zugunsten von GABA und Serotonin, unterdrückt glutamatvermittelten Zelluntergang und fördert Angiogenese sowie Neurogenese. Anwendungsfelder reichen von Schlaganfall-Rehabilitation über chronisch-entzündliche Darmerkrankungen bis zur rheumatoiden Arthritis.</p>
+  </section>
+  <section class="chapter alt" id="ch3">
+    <div class="chapter-head">
+      <span class="chapter-num">04</span>
+      <h2>Das Immunsystem als dynamisches Netzwerk</h2>
+      <p class="chapter-intro">Kein starrer Schutzschild, sondern ein lernendes Organ — verteilt über Darm, Zelle und Nervensystem.</p>
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th></th><th>Angeborene Abwehr</th><th>Adaptive Abwehr</th></tr></thead>
+      <tbody>
+        <tr><td>Reaktionszeit</td><td>Sofort (Minuten bis Stunden)</td><td>Verzögert (4–7 Tage beim Erstkontakt)</td></tr>
+        <tr><td>Spezifität</td><td>Allgemeine molekulare Muster</td><td>Hochspezifische Rezeptoren für exakte Antigene</td></tr>
+        <tr><td>Hauptakteure</td><td>Makrophagen, Granulozyten, Killerzellen</td><td>B-Lymphozyten, T-Lymphozyten</td></tr>
+        <tr><td>Gedächtnis</td><td>Keines</td><td>Lebenslang</td></tr>
+      </tbody>
+    </table>
+    <p class="footnote">Dendritische Zellen bilden die Brücke: Sie nehmen Pathogene auf, wandern zu den Lymphknoten und präsentieren dort Antigene, um die spezifische Immunantwort hochzufahren.</p>
+
+    <div class="stat-block">
+      <span class="stat-num">70%</span>
+      <p>aller antikörperproduzierenden Immunzellen sitzen in der Darmschleimhaut (GALT) — dem größten Immunkompartiment des Körpers, das eine Kontaktfläche von über 200 Quadratmetern verteidigt.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="diagram-box">
+        <svg viewBox="0 0 300 140" aria-label="Symbiose versus Dysbiose">
+          <path d="M20,40 h100" stroke="var(--teal)" stroke-width="10" stroke-linecap="round"/>
+          <text x="20" y="70" class="diagram-label">Symbiose → intakte Barriere</text>
+          <path d="M20,100 h100" stroke="var(--coral)" stroke-width="10" stroke-linecap="round" stroke-dasharray="6 6"/>
+          <text x="20" y="130" class="diagram-label">Dysbiose → Leaky Gut</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Das Mikrobiom als Trainer</h3>
+        <p>Eine gesunde, diverse Darmflora trainiert das Immunsystem und fördert Toleranz. Kippt die Balance (Dysbiose), sinkt die Barrierefunktion — Bakterien und Toxine dringen leichter durch das Epithel, was Entzündung befeuert.</p>
+      </div>
+    </div>
+
+    <h3>Mitochondrien: mehr als Kraftwerke</h3>
+    <p class="wide-p">Mitochondrien fungieren als integrative Plattformen, die metabolische Zustände direkt mit Entzündungs- und Stressantworten verknüpfen. Aufgrund ihrer evolutionären Herkunft enthalten sie molekulare Strukturen, die das Immunsystem als fremd erkennt — wenn sie bei zellulärem Stress in die Zelle austreten, lösen sie Alarm aus.</p>
+
+    <h3>Die Kaskade des chronischen Stresses</h3>
+    <div class="flow-chain">
+      <span>Psychologischer Stress</span>
+      <span>→</span>
+      <span>Stresshormone</span>
+      <span>→</span>
+      <span>Oxidativer Stress</span>
+      <span>→</span>
+      <span>Mitochondrienschaden</span>
+      <span>→</span>
+      <span class="chain-end">Geschwächte Immunzellen</span>
+    </div>
+
+    <div class="grid-3 card-row">
+      <div class="mini-card accent-teal">
+        <h4>Mikrobiom pflegen</h4>
+        <p>Ballaststoffreiche Ernährung und gezielte Probiotika stützen die Darmbarriere.</p>
+      </div>
+      <div class="mini-card accent-gold">
+        <h4>Oxidativen Stress senken</h4>
+        <p>Antioxidantien neutralisieren freie Radikale und schützen Mitochondrien wie Telomere.</p>
+      </div>
+      <div class="mini-card accent-teal">
+        <h4>Regeneration priorisieren</h4>
+        <p>Schlaf und aktive Entspannung senken Glukokortikoide und fördern Reparatur.</p>
+      </div>
+    </div>
+  </section>
+  <section class="chapter" id="ch7">
+    <div class="chapter-head">
+      <span class="chapter-num">05</span>
+      <h2>Die Zirbeldrüse — der Taktgeber</h2>
+      <p class="chapter-intro">Ein zapfenförmiges Organ, kaum 8 Millimeter groß, mitten im Gehirn — und der Schlüssel zu deiner inneren Uhr.</p>
+    </div>
+
+    <h3>Die Licht-Verdrahtung</h3>
+    <div class="flow-chain">
+      <span>Netzhaut (Sensor)</span>
+      <span>→</span>
+      <span>Suprachiasmatischer Kern (Relaisstation)</span>
+      <span>→</span>
+      <span class="chain-end">Zirbeldrüse (Schalter)</span>
+    </div>
+
+    <div class="grid-2">
+      <div class="diagram-box">
+        <svg viewBox="0 0 300 130" aria-label="Serotonin zu Melatonin">
+          <text x="10" y="30" class="diagram-label">L-Tryptophan</text>
+          <text x="10" y="55" class="diagram-label">↓ Licht</text>
+          <text x="10" y="80" class="diagram-label diagram-label-strong">Serotonin</text>
+          <text x="10" y="105" class="diagram-label">↓ Dunkelheit</text>
+          <text x="10" y="128" class="diagram-label diagram-label-strong">Melatonin</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Die biochemische Fabrik des Schlafs</h3>
+        <p>Eine essenzielle Aminosäure aus der Nahrung wird unter Lichteinfluss zu Serotonin, dem Wachheits-Hormon. Sobald Dunkelheit eintritt, wandelt die Zirbeldrüse das gespeicherte Serotonin in Melatonin um — das Schlafhormon, das den Körper in den Ruhezustand versetzt. Die Sekretion erreicht ihren Höhepunkt zwischen 2 und 4 Uhr nachts.</p>
+      </div>
+    </div>
+
+    <p class="footnote">Mit zunehmendem Alter lagern sich Kalksalze in das Gewebe der Zirbeldrüse ein ("Hirnsand"). Die Bedeutung ist nicht restlos geklärt, korreliert aber stark mit abnehmender Melatoninproduktion und vermehrten Schlafstörungen.</p>
+
+    <div class="callout-box accent-coral-bg">
+      <h3>Die moderne Licht-Krise</h3>
+      <p>Künstliches Licht von Bildschirmen enthält hohe Anteile an kurzwelligem Blaulicht. Trifft dieses abends auf die Netzhaut, sendet der retinohypothalamische Trakt ein "Falsches Tag"-Signal — die Zirbeldrüse wird gehemmt, die Umwandlung zu Melatonin blockiert. Die innere Uhr verliert die Synchronisation, Einschlaflatenz und Insomnie sind die Folge.</p>
+    </div>
+
+    <h3>Praxis-Protokoll: den Rhythmus meistern</h3>
+    <div class="timeline">
+      <div class="timeline-item"><span class="timeline-time">Morgens</span><p>10–20 Minuten direktes Tageslicht nach dem Aufwachen setzt den Anker für den Tag und stoppt Rest-Melatonin abrupt.</p></div>
+      <div class="timeline-item"><span class="timeline-time">Abends</span><p>Ab 2 Stunden vor dem Schlafen: helles Kunstlicht dämpfen, Bildschirme meiden oder Blaulichtfilter nutzen.</p></div>
+      <div class="timeline-item"><span class="timeline-time">Nachts</span><p>Absolute Dunkelheit im Schlafzimmer — jede Lichtquelle kann den Melatonin-Höhepunkt stören.</p></div>
+    </div>
+    <p class="wide-p">Ergänzend wirken 3 g Glycin (senkt Kerntemperatur), 100–200 mg L-Theanin (beruhigt) und 150–200 mg Magnesium-Glycinat (entspannt) als Synergie-Stack ohne exogenes Melatonin, das in Deutschland oft Arzneimittelstatus hat.</p>
+    <p class="wide-p callout">Hervorragender Schlaf entsteht nicht durch eine einzelne Pille, sondern durch die perfekte Synchronisation deiner Biologie mit der Umwelt.</p>
+  </section>
+  <section class="chapter alt" id="ch8">
+    <div class="chapter-head">
+      <span class="chapter-num">06</span>
+      <h2>Oxidativer Stress</h2>
+      <p class="chapter-intro">Der Faktor, der sich durch fast jedes vorherige Kapitel zieht: das Ungleichgewicht zwischen freien Radikalen und den Schutzsystemen der Zelle.</p>
+    </div>
+
+    <p class="wide-p">Oxidativer Stress bezeichnet einen Zustand, bei dem im Körper mehr reaktive Sauerstoffverbindungen — freie Radikale — entstehen, als durch die körpereigenen Schutzsysteme, vor allem Antioxidantien, abgefangen werden können. Freie Radikale sind dabei nicht grundsätzlich schlecht: Sie entstehen ganz normal bei der Energiegewinnung in den Mitochondrien und werden auch für Abwehrreaktionen des Immunsystems benötigt. Problematisch wird es erst, wenn das Gleichgewicht über längere Zeit gestört ist.</p>
+
+    <h3>Mögliche Ursachen</h3>
+    <div class="grid-4 card-row">
+      <div class="mini-card small"><h4>Rauchen</h4><p>Auch Passivrauchen belastet das antioxidative System.</p></div>
+      <div class="mini-card small"><h4>Alkohol</h4><p>Übermäßiger Konsum erhöht die Radikalbildung.</p></div>
+      <div class="mini-card small"><h4>UV-Strahlung</h4><p>Starke Sonneneinstrahlung und Sonnenbrände.</p></div>
+      <div class="mini-card small"><h4>Umweltgifte</h4><p>Luftverschmutzung und bestimmte Schadstoffe.</p></div>
+      <div class="mini-card small"><h4>Ernährung</h4><p>Langfristig ungünstig, besonders stark verarbeitete Lebensmittel.</p></div>
+      <div class="mini-card small"><h4>Übertraining</h4><p>Sehr intensive Belastung ohne ausreichende Erholung.</p></div>
+      <div class="mini-card small"><h4>Schlafmangel</h4><p>Zu wenig Regeneration für die zellulären Reparatursysteme.</p></div>
+      <div class="mini-card small"><h4>Psychischer Stress</h4><p>Anhaltender Druck, Entzündungen und Infektionen.</p></div>
+    </div>
+    <p class="footnote">Auch bestimmte Erkrankungen, Stoffwechselstörungen und Medikamente können oxidativen Stress begünstigen.</p>
+
+    <h3>Was oxidativer Stress in der Zelle anrichtet</h3>
+    <table class="data-table">
+      <thead><tr><th>Struktur</th><th>Mögliche Folge</th></tr></thead>
+      <tbody>
+        <tr><td>Zellmembranen</td><td>Schäden an Fetten (Lipidoxidation)</td></tr>
+        <tr><td>Proteine</td><td>Veränderung oder Funktionsverlust von Eiweißen</td></tr>
+        <tr><td>DNA</td><td>Oxidative DNA-Schäden — auch an den Telomeren</td></tr>
+        <tr><td>Mitochondrien</td><td>Beeinträchtigung der Energieproduktion</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-box accent-coral-bg">
+      <p>Chronisch erhöhter oxidativer Stress wird mit verschiedenen Alterungsprozessen und Erkrankungen in Verbindung gebracht — unter anderem mit Herz-Kreislauf-Erkrankungen, Diabetes, neurodegenerativen Erkrankungen und chronischen Entzündungsprozessen. Wichtig dabei: Oxidativer Stress ist häufig Teil des Krankheitsgeschehens, aber nicht zwangsläufig die alleinige Ursache einer Erkrankung.</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Was den Körper schützt</h3>
+        <p>Der Körper verfügt über ein eigenes antioxidatives Schutzsystem — etwa die Enzyme Superoxiddismutase, Katalase und Glutathionperoxidase. Dazu kommen Antioxidantien aus der Ernährung: Vitamin C, Vitamin E und verschiedene Pflanzenstoffe. Eine abwechslungsreiche Ernährung mit viel Gemüse, Obst, Hülsenfrüchten, Vollkornprodukten und Nüssen unterstützt diese Schutzsysteme spürbar.</p>
+      </div>
+      <div class="diagram-box small-diagram">
+        <svg viewBox="0 0 300 130" aria-label="Gleichgewicht zwischen freien Radikalen und Antioxidantien">
+          <line x1="20" y1="65" x2="280" y2="65" stroke="var(--line)" stroke-width="2"/>
+          <circle cx="70" cy="65" r="22" fill="none" stroke="var(--coral)" stroke-width="2"/>
+          <text x="34" y="105" class="diagram-label">Freie Radikale</text>
+          <circle cx="230" cy="65" r="22" fill="none" stroke="var(--teal)" stroke-width="2"/>
+          <text x="182" y="105" class="diagram-label">Antioxidantien</text>
+        </svg>
+      </div>
+    </div>
+
+    <p class="wide-p footnote">Hoch dosierte Antioxidantien als Nahrungsergänzung sind dagegen nicht automatisch besser und können teilweise unerwünschte Wirkungen haben — vergleiche dazu die Anti-Stacks in Kapitel 5.</p>
+
+    <p class="callout">Oxidativer Stress = zu viele reaktive Sauerstoffverbindungen im Verhältnis zu den körpereigenen Schutzmechanismen — mit möglicher Schädigung von Zellen und Gewebe als Folge.</p>
+  </section>
+  <section class="chapter" id="ch9">
+    <div class="chapter-head">
+      <span class="chapter-num">07</span>
+      <h2>Viszerales Fett</h2>
+      <p class="chapter-intro">Nicht das sichtbare Fett unter der Haut ist das Problem, sondern das, was tief im Bauchraum um die inneren Organe liegt.</p>
+    </div>
+
+    <p class="wide-p">Viszerales Fett liegt tief im Bauchraum um innere Organe wie Leber und Darm — und ist gesundheitlich problematischer als das sichtbare Unterhautfett. Es ist stoffwechselaktiv und kann entzündungsfördernde Botenstoffe freisetzen.</p>
+
+    <h3>Warum ist viszerales Fett riskant?</h3>
+    <div class="grid-4 card-row">
+      <div class="mini-card small accent-coral"><h4>Insulinresistenz</h4><p>Erhöhtes Risiko für Typ-2-Diabetes.</p></div>
+      <div class="mini-card small accent-coral"><h4>Bluthochdruck</h4><p>Ungünstige Wirkung auf den Kreislauf.</p></div>
+      <div class="mini-card small accent-coral"><h4>Blutfettwerte</h4><p>Verschiebung in eine ungünstige Richtung.</p></div>
+      <div class="mini-card small accent-coral"><h4>Fettleber</h4><p>Erhöhte Fetteinlagerung in der Leber.</p></div>
+      <div class="mini-card small accent-coral"><h4>Herz-Kreislauf</h4><p>Höheres Risiko für Erkrankungen und Schlaganfall.</p></div>
+      <div class="mini-card small accent-coral"><h4>Krebsrisiko</h4><p>Erhöhtes Risiko für bestimmte Krebserkrankungen.</p></div>
+      <div class="mini-card small accent-coral"><h4>Schlafapnoe</h4><p>Und weitere Stoffwechselprobleme.</p></div>
+    </div>
+
+    <p class="callout">Das Gewicht allein sagt nicht zuverlässig, wie viel viszerales Fett jemand hat. Auch Menschen mit normalem BMI können relativ viel Bauch- bzw. viszerales Fett besitzen.</p>
+
+    <div class="grid-2">
+      <div class="diagram-box small-diagram">
+        <svg viewBox="0 0 300 130" aria-label="Taillenumfang als Hinweis auf viszerales Fett">
+          <ellipse cx="150" cy="65" rx="90" ry="50" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <line x1="60" y1="65" x2="240" y2="65" stroke="var(--teal)" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="110" y="115" class="diagram-label">Taillenumfang</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Woran kann man es erkennen?</h3>
+        <p>Ein wichtiger, einfacher Hinweis ist ein großer Taillenumfang. Präziser lässt sich viszerales Fett mit bildgebenden Verfahren wie CT oder MRT bestimmen — handelsübliche Körperfettwaagen können den Wert dagegen nur schätzen.</p>
+      </div>
+    </div>
+
+    <p class="wide-p callout">Die gute Nachricht: Viszerales Fett reagiert häufig relativ gut auf Gewichtsabnahme, Bewegung und eine bessere Ernährung. Schon eine moderate Gewichtsreduktion kann den Stoffwechsel deutlich verbessern.</p>
+  </section>
+  <section class="chapter alt" id="ch4">
+    <div class="chapter-head">
+      <span class="chapter-num">08</span>
+      <h2>Der zelluläre Bauplan: Ernährung</h2>
+      <p class="chapter-intro">Was du isst, bestimmt, welches Baumaterial deine Zellen zur Reparatur zur Verfügung haben.</p>
+    </div>
+
+    <h3>Aminosäuren — die Architekten der Zelle</h3>
+    <p class="wide-p">Ohne Aminosäuren keine Zellreparatur. Von den 20 relevanten Bausteinen sind 8 essenziell und müssen über die Nahrung zugeführt werden. Bei pflanzlicher Ernährung erhöht die clevere Kombination — etwa Vollkorn plus Hülsenfrüchte — die biologische Wertigkeit enorm.</p>
+
+    <div class="grid-3 card-row">
+      <div class="mini-card">
+        <h4>L-Methionin</h4>
+        <p>Essenziell, schwefelhaltig. Wichtig für den Hirnstoffwechsel. Quellen: Vollkorn, Milch, Fleisch.</p>
+      </div>
+      <div class="mini-card">
+        <h4>L-Glutathion</h4>
+        <p>Das wichtigste intrazelluläre Antioxidans. Gebildet aus Cystein, Glycin, Glutaminsäure.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Cystein</h4>
+        <p>Semi-essenziell, direkte Vorstufe von Glutathion. Quellen: Hafer, Erbsen, Sonnenblumenkerne.</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="diagram-box">
+        <svg viewBox="0 0 300 140" aria-label="Entzündungsförderer versus Entzündungshemmer">
+          <text x="20" y="30" class="diagram-label diagram-label-strong">Das Feuer</text>
+          <text x="20" y="55" class="diagram-label">Rotes Fleisch, Süßwaren,</text>
+          <text x="20" y="72" class="diagram-label">hochverarbeitete Kost</text>
+          <line x1="20" y1="90" x2="280" y2="90" stroke="var(--line)" stroke-width="1"/>
+          <text x="20" y="112" class="diagram-label diagram-label-strong">Die Löscher</text>
+          <text x="20" y="132" class="diagram-label">Vitamin C · Carotinoide · Omega-3</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Entzündungen steuern</h3>
+        <p>Westliche Ernährung mit viel rotem Fleisch, Süßwaren und Fertigprodukten steigert Entzündungsmarker messbar und beschleunigt die Zellalterung. Dagegen wirken hitzeempfindliches Vitamin C (Paprika, Johannisbeere), Carotinoide (Tomaten, Möhren) und Omega-3-Fettsäuren, die niemals erhitzt werden sollten.</p>
+      </div>
+    </div>
+
+    <h3>Die Apotheke der Natur</h3>
+    <div class="grid-4 card-row">
+      <div class="mini-card small"><h4>Kurkuma</h4><p>Curcumin wirkt schmerzlindernd, fängt Radikale ab.</p></div>
+      <div class="mini-card small"><h4>Ananas</h4><p>Bromelain wirkt gerinnungshemmend und entzündungsregulierend.</p></div>
+      <div class="mini-card small"><h4>Knoblauch</h4><p>Sulfide wirken antibakteriell und gefäßschützend.</p></div>
+      <div class="mini-card small"><h4>Hagebutte</h4><p>Galaktolipide — als Pulver nutzen, nicht als heißer Tee.</p></div>
+    </div>
+
+    <div class="callout-box">
+      <h3>Der Masterplan: Planetary Health Diet</h3>
+      <p>Entwickelt von der EAT-Lancet-Kommission (2019/2025) als globale Referenzernährung — stark pflanzenbetont, mit Vollkornprodukten und hochwertigen Ölen, drastisch reduziertem Zucker und rotem Fleisch. Ziel: 9,6 Milliarden Menschen im Jahr 2050 gesund und innerhalb planetarer Grenzen ernähren.</p>
+      <p class="footnote">Bei extrem pflanzenbasierter Umsetzung gezielt auf Calcium, Eisen, Vitamin B12 und Jod achten.</p>
+    </div>
+
+    <p class="wide-p callout">Was den Planeten rettet, hält auch die Zellen jung: Die PHD reduziert genau jene Entzündungsfaktoren, die Telomere verkürzen, und liefert gleichzeitig das Baumaterial für zelluläre Reparatur.</p>
+  </section>
+  <section class="chapter" id="ch5">
+    <div class="chapter-head">
+      <span class="chapter-num">09</span>
+      <h2>Präzisions-Nahrungsergänzung</h2>
+      <p class="chapter-intro">Supplements sind kein Ersatz für Lebensstil — sie sind der präzise Booster obendrauf. Die 80/20-Regel gilt: Schlaf, Protein und Training bilden das Fundament.</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h3>Core Stack 1 — Kardiovaskulär & Knochen</h3>
+        <ul class="stack-list">
+          <li><strong>Omega-3 (EPA/DHA)</strong> 1–2 g — moduliert Entzündungen, senkt Triglyceride</li>
+          <li><strong>Vitamin D3</strong> 25–50 µg — öffnet die Tür für Kalziumaufnahme im Darm</li>
+          <li><strong>Vitamin K2</strong> 90–200 µg — lenkt Kalzium in die Knochen, nicht in die Arterien</li>
+          <li><strong>Magnesium</strong> 150–250 mg — Katalysator der D3-Umwandlung</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Core Stack 2 — Zellenergie & Langlebigkeit</h3>
+        <ul class="stack-list">
+          <li><strong>Nicotinamid-Ribosid</strong> 250–500 mg — erhöht den NAD⁺-Spiegel</li>
+          <li><strong>TMG / Betain</strong> 500–1000 mg — stabilisiert den Methylierungspool</li>
+          <li><strong>Coenzym Q10</strong> 100–200 mg — stützt die mitochondriale Atmungskette</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Die Anti-Stacks — Reibungsverluste vermeiden</h3>
+    <div class="grid-3 card-row">
+      <div class="mini-card accent-coral"><h4>Zink vs. Kupfer, Kalzium vs. Eisen</h4><p>Konkurrieren um dieselben Absorptionswege. Nie hochdosiert gleichzeitig einnehmen.</p></div>
+      <div class="mini-card accent-coral"><h4>Vitamin C + Krafttraining</h4><p>Direkt ums Training herum kann es die gewünschte muskuläre Anpassung blockieren.</p></div>
+      <div class="mini-card accent-coral"><h4>Kaffee/Tee + Eisen</h4><p>Tannine und Koffein hemmen die Eisenaufnahme massiv — zeitlichen Abstand halten.</p></div>
+    </div>
+
+    <h3>Das Chronobiologie-Protokoll</h3>
+    <div class="timeline">
+      <div class="timeline-item"><span class="timeline-time">Sunrise / nüchtern</span><p>Probiotika und Eisen für maximale Absorption, Adaptogene für Fokus.</p></div>
+      <div class="timeline-item"><span class="timeline-time">Frühstück</span><p>B-Komplex / Multivitamine, um Übelkeit auf leerem Magen zu vermeiden.</p></div>
+      <div class="timeline-item"><span class="timeline-time">Mittag / fetthaltigste Mahlzeit</span><p>Fettlösliche Stacks: Omega-3, Vitamin D, A/E/K.</p></div>
+      <div class="timeline-item"><span class="timeline-time">Abend</span><p>Magnesium, Glycin und L-Theanin zur Entspannung.</p></div>
+    </div>
+
+    <h3>Qualität wie ein Experte lesen</h3>
+    <div class="grid-4 card-row">
+      <div class="mini-card small"><h4>IFOS-Zertifikat</h4><p>Für Omega-3: Oxidationsstabilität, keine Schwermetalle.</p></div>
+      <div class="mini-card small"><h4>CoA</h4><p>Aktuelles Laborzertifikat pro Charge, besonders bei Pflanzenextrakten.</p></div>
+      <div class="mini-card small"><h4>Standardisierte Extrakte</h4><p>Exakte Prozentangaben statt vagem "Pflanzenpulver".</p></div>
+      <div class="mini-card small"><h4>Transparente Verbindungen</h4><p>"Magnesium als Glycinat" statt einfach nur "Magnesium".</p></div>
+    </div>
+
+    <p class="footnote">Regulatorischer Rahmen (D/A/CH): NMN gilt als Novel Food in der Zulassungs-Grauzone. Melatonin wird vom BfR als zulassungspflichtiges Arzneimittel eingestuft. NR und Spermidin sind legal als Supplement erhältlich.</p>
+
+    <div class="callout-box">
+      <h3>Der 90-Tage-Implementierungsplan</h3>
+      <p><strong>Tage 1–30:</strong> Metabolic Base Stack (Omega-3, D3/K2, Magnesium), Fokus auf Schlafhygiene und Protein-Ziele.<br>
+      <strong>Tage 31–60:</strong> Gezieltes Layering — immer nur ein neues Produkt pro Woche.<br>
+      <strong>Tage 61–90:</strong> Blutwerte prüfen, Non-Responder streichen, Stack vereinfachen.</p>
+      <p class="footnote">Goldene Regel: Ein präzise getimter Basis-Stack schlägt ein zufälliges Arsenal an Pillen.</p>
+    </div>
+  </section>
+  <section class="chapter alt" id="ch10">
+    <div class="chapter-head">
+      <span class="chapter-num">10</span>
+      <h2>Waldbaden — Shinrin-Yoku</h2>
+      <p class="chapter-intro">Nicht einfach ein Spaziergang: bewusst Zeit im Wald verbringen und die Umgebung mit allen Sinnen wahrnehmen.</p>
+    </div>
+
+    <p class="wide-p">Waldbaden, japanisch Shinrin-Yoku, bedeutet nicht einfach, im Wald spazieren zu gehen. Es geht darum, bewusst Zeit im Wald zu verbringen und die Umgebung mit allen Sinnen wahrzunehmen — und greift damit direkt in das vegetative Nervensystem aus Kapitel 2 ein.</p>
+
+    <h3>Was passiert dabei?</h3>
+    <div class="grid-3 card-row">
+      <div class="mini-card accent-teal"><h4>Stresssystem</h4><p>Ruhige Waldumgebung, langsames Gehen und bewusstes Atmen können den Sympathikus herunterfahren und den Parasympathikus fördern.</p></div>
+      <div class="mini-card accent-teal"><h4>Herz und Kreislauf</h4><p>Die Entspannung kann sich positiv auf Herzfrequenz und Blutdruck auswirken.</p></div>
+      <div class="mini-card accent-gold"><h4>Stresshormone</h4><p>Untersuchungen zu Shinrin-Yoku zeigen teilweise niedrigere Cortisolwerte nach einem Aufenthalt im Wald.</p></div>
+      <div class="mini-card accent-gold"><h4>Nervensystem</h4><p>Natürliche, wenig überfordernde Reize — Blätter, Vogelstimmen, Gerüche, Licht — können Aufmerksamkeit und Nervensystem beruhigen.</p></div>
+      <div class="mini-card"><h4>Psyche</h4><p>Viele Menschen empfinden weniger Anspannung, Grübeln und mentale Erschöpfung — und fühlen sich danach ausgeglichener.</p></div>
+      <div class="mini-card"><h4>Immunsystem</h4><p>Ätherische Pflanzenstoffe ("Phytonzide") von Bäumen zeigen Hinweise auf immunologische Effekte — ohne dass daraus eine Heilwirkung abzuleiten ist.</p></div>
+    </div>
+
+    <h3>Der entscheidende Unterschied zum normalen Spaziergang</h3>
+    <p class="wide-p">Beim Waldbaden geht es weniger darum, Strecke zu machen, sondern darum, anzukommen. Der Wald wird zum Raum für Regeneration statt zum Sportplatz.</p>
+    <ol class="practice-steps">
+      <li>Langsam gehen und bewusst die Umgebung betrachten.</li>
+      <li>Zwischendurch stehen bleiben.</li>
+      <li>Geräusche wahrnehmen, ohne sie zu bewerten.</li>
+      <li>An Baumrinde, Erde oder Blättern riechen bzw. sie berühren.</li>
+      <li>Tief und ruhig atmen.</li>
+      <li>Einige Minuten einfach sitzen und nichts "leisten".</li>
+    </ol>
+
+    <p class="callout">Der Wald wird zum Raum für Regeneration statt zum Sportplatz.</p>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="chapter calculator" id="calc">
+    <div class="chapter-head">
+      <span class="chapter-num">＋</span>
+      <h2>Dein Exposom-Score</h2>
+      <p class="chapter-intro">Sechs Fragen zu den Faktoren aus Kapitel 1 — für eine grobe Einschätzung, wie dein Alltag deine Telomere behandelt. Kein medizinischer Test, sondern ein Denkanstoß.</p>
+    </div>
+
+    <form id="scoreForm" class="score-form">
+
+      <div class="q-block" data-pillar="ernaehrung">
+        <label for="q_ernaehrung">Wie oft isst du überwiegend pflanzenbasiert (Gemüse, Vollkorn, Hülsenfrüchte statt rotem Fleisch & Zucker)?</label>
+        <input type="range" id="q_ernaehrung" min="0" max="4" value="2" step="1">
+        <div class="range-labels"><span>Selten</span><span>Fast immer</span></div>
+      </div>
+
+      <div class="q-block" data-pillar="bewegung">
+        <label for="q_bewegung">Wie viele Ausdauer- oder Intervalltrainings machst du pro Woche?</label>
+        <input type="range" id="q_bewegung" min="0" max="4" value="2" step="1">
+        <div class="range-labels"><span>0×</span><span>5×+</span></div>
+      </div>
+
+      <div class="q-block" data-pillar="schlaf">
+        <label for="q_schlaf">Wie regelmäßig schläfst du 7+ Stunden mit fester Schlafenszeit?</label>
+        <input type="range" id="q_schlaf" min="0" max="4" value="2" step="1">
+        <div class="range-labels"><span>Selten</span><span>Fast immer</span></div>
+      </div>
+
+      <div class="q-block" data-pillar="zellgifte">
+        <label for="q_zellgifte">Wie konsequent meidest du Rauchen, übermäßigen Alkohol und hochverarbeitete Lebensmittel?</label>
+        <input type="range" id="q_zellgifte" min="0" max="4" value="2" step="1">
+        <div class="range-labels"><span>Kaum</span><span>Konsequent</span></div>
+      </div>
+
+      <div class="q-block" data-pillar="stress">
+        <label for="q_stress">Wie gut gelingt es dir, Stress aktiv zu regulieren (Meditation, Pausen, Atemübungen)?</label>
+        <input type="range" id="q_stress" min="0" max="4" value="2" step="1">
+        <div class="range-labels"><span>Kaum</span><span>Sehr gut</span></div>
+      </div>
+
+      <div class="q-block" data-pillar="soziales">
+        <label for="q_soziales">Wie stark sind deine sozialen Bindungen und dein Gefühl von Verbundenheit?</label>
+        <input type="range" id="q_soziales" min="0" max="4" value="2" step="1">
+        <div class="range-labels"><span>Schwach</span><span>Sehr stark</span></div>
+      </div>
+
+    </form>
+
+    <div class="result-panel">
+      <div class="gauge-wrap">
+        <svg viewBox="0 0 200 120" class="gauge">
+          <path d="M20,110 A80,80 0 0,1 180,110" fill="none" stroke="var(--line)" stroke-width="14" stroke-linecap="round"/>
+          <path id="gaugeFill" d="M20,110 A80,80 0 0,1 180,110" fill="none" stroke="var(--teal)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="126"/>
+        </svg>
+        <div class="gauge-readout">
+          <span id="scoreNumber">50</span>
+          <span class="gauge-unit">/ 100</span>
+        </div>
+      </div>
+      <p id="scoreVerdict" class="score-verdict">Dein Exposom liegt im Mittelfeld — es gibt Stellschrauben.</p>
+
+      <div class="pillar-bars" id="pillarBars">
+        <!-- generated by JS -->
+      </div>
+
+      <p class="footnote disclaimer">Dieser Rechner ersetzt keine medizinische Diagnostik und misst keine echte Telomerlänge. Er dient allein dazu, die sechs Lebensstil-Hebel aus Kapitel 1 greifbar zu machen.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Zellwerk — zusammengestellt aus zehn Themenbereichen zur zellulären Langlebigkeit: Telomere, Vagusnerv, Immunsystem, Ernährung, Supplementation, Epigenetik, Zirbeldrüse, oxidativer Stress, viszerales Fett und Waldbaden.</p>
+    <div class="author-box">
+      <h3>Über den Autor</h3>
+      <p><strong>Daniel Hirsch</strong><br>
+      Geboren am 07.11.1964<br>
+      Ausbildung: Reiki-Meister und Quantenheilung</p>
+    </div>
+    <p class="footnote">Keine medizinische Beratung. Bei gesundheitlichen Fragen wende dich an eine Ärztin oder einen Arzt.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

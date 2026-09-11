@@ -2,8 +2,8 @@
   --bg: #0A1613;
   --bg-alt: #0D1B17;
   --surface: #101F1A;
-  --bg-a: rgba(10, 22, 19, 0.93);
-  --bg-alt-a: rgba(13, 27, 23, 0.91);
+  --bg-a: rgba(10, 22, 19, 0.90);
+  --bg-alt-a: rgba(13, 27, 23, 0.88);
   --surface-a: rgba(16, 31, 26, 0.94);
   --line: rgba(237, 237, 228, 0.14);
   --text: #EDEDE4;
@@ -29,7 +29,7 @@ body {
   margin: 0;
   background-color: var(--bg);
   background-image:
-    linear-gradient(180deg, rgba(10,22,19,0.88) 0%, rgba(10,22,19,0.94) 100%),
+    linear-gradient(180deg, rgba(9,18,14,0.78) 0%, rgba(10,20,16,0.88) 60%, rgba(10,22,19,0.92) 100%),
     url('wald-hintergrund.jpg');
   background-size: cover;
   background-position: center;

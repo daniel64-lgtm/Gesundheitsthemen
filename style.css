@@ -136,12 +136,13 @@ main { margin-left: 220px; }
   font-size: 15px;
   width: fit-content;
 }
-.hero-helix {
+.hero-bonsai {
   position: absolute;
-  right: 4vw; top: 0;
-  height: 100%;
-  width: 200px;
-  opacity: 0.5;
+  right: 5vw; top: 50%;
+  transform: translateY(-50%);
+  width: min(340px, 32vw);
+  height: auto;
+  opacity: 0.9;
 }
 
 /* ---------- TOC / Overview ---------- */
@@ -467,7 +468,7 @@ h3 { font-size: 22px; margin-top: 0; }
   main { margin-left: 0; }
   .grid-2, .grid-2.reverse { grid-template-columns: 1fr; direction: ltr; }
   .grid-3.card-row, .grid-4.card-row { grid-template-columns: 1fr 1fr; }
-  .hero-helix { opacity: 0.25; width: 120px; }
+  .hero-bonsai { opacity: 0.35; width: 42vw; right: 2vw; }
   .timeline-item { grid-template-columns: 1fr; gap: 4px; }
   .toc-grid { grid-template-columns: repeat(2, 1fr); }
   .toc-section { padding: 0 6vw 10vw; }
